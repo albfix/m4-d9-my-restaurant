@@ -25,11 +25,15 @@ class DishDetail extends React.Component {
 
     }
 
+    changeState = (dish) => {
+        this.state({ dish, loading: false })
+    }
+
     render() {
         console.log('DISHDETAIL PROPS --> ', this.props)
         return (
             <Container>
-                {this.state.loading && <h1>LOADING...</h1>}
+                {this.state.loading ? <h1>LOADING...</h1> : null}
                 {this.state.dish && (
                     <>
                         <Row>
