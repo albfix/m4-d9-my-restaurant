@@ -21,7 +21,7 @@ class DishDetail extends React.Component {
         setTimeout(() => {
             this.setState({ dish, loading: false })
         },
-            1sec);
+            1000);
 
     }
 
