@@ -15,6 +15,14 @@ class DishDetail extends React.Component {
         const dish = dishes.find(dish => dishId === dish.id.toString())
         console.log('DISH --> ', dish)
         this.setState({ dish, loading: false })
+        /* this.timerID = setInterval(
+            () => this.tick(),
+            1000 */
+        setTimeout(() => {
+            this.setState({ dish, loading: false })
+        },
+            1sec);
+
     }
 
     render() {
