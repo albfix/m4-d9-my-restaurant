@@ -5,18 +5,19 @@ import { Link, withRouter } from 'react-router-dom'
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}     ///////CREATA CLASSE NAVBAR E CONSTRUCTOR, MA CONTINUARE QUA 
+    this.state = {}     //CREATA CLASSE NAVBAR E CONSTRUCTOR, 
+    //////CORRETTO PROBLEMA DEI PROPS NELLE LINEE DI CODICE DI RETURN 
   }
   render() {
     console.log(this.props)
 
     return (
       <div>
-        {console.log('NAVBAR PROPS --> ', props)}
+        {console.log('NAVBAR PROPS --> ', this.props)}
         <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
           <Link to="/">
             <Navbar.Brand>
-              {props.title} - Striving For Food
+              {this.props.title} - Striving For Food
           </Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -24,7 +25,7 @@ class NavBar extends React.Component {
             <Nav className="ml-auto">
               <Link to="/menu"
                 className={
-                  props.location.pathname === '/menu'
+                  this.props.location.pathname === '/menu'
                     ? "nav-link active"
                     : "nav-link"
                 }>
@@ -32,7 +33,7 @@ class NavBar extends React.Component {
             </Link>
               <Link to="/reservation"
                 className={
-                  props.location.pathname === '/reservation'
+                  this.props.location.pathname === '/reservation'
                     ? "nav-link active"
                     : "nav-link"
                 }>
