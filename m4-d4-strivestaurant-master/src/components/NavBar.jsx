@@ -9,7 +9,7 @@ class NavBar extends React.Component {
     //////CORRETTO PROBLEMA DEI PROPS NELLE LINEE DI CODICE DI RETURN 
   }
   render() {
-    console.log('Render Component')
+    console.log('Rendered Component')
 
     return (
       <div>
